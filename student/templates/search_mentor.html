@@ -1,0 +1,19 @@
+<h1> WELCOME TO KPM INDERA MAHKOTA </h1>
+<strong> SEARCH MENTOR </strong><br><br>
+<form action="" method="get">
+    Enter ID : <input type="text" name="i_id">
+    <input type="submit" value="SEARCH">
+</form>
+
+<table border="1">
+    <th> Id </th><th> Name </th>
+
+{% for x in data %}
+<tr>
+    <td>{{ x.id }}</td>
+    <td>{{ x.name }}</td>
+</tr>
+{% endfor %}
+</table>
+<br><br>
+<button><a href="{% url 'index' %}"> back </a></button>

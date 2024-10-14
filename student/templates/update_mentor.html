@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> KOLEJ PROFESIONAL MARA INDERA MAHKOTA </h1>
+    <h2> UPDATE MENTOR </h2>
+
+    <form action="{% url 'save_update_mentor' id %}" method="post">
+        {% csrf_token %}
+            Mentor ID : <input type="text" name="code" value="{{mentor.id}}" disabled="false"> <br><br>
+            Mentor Name : <input type="text" name="code" value="{{mentor.name}}" disabled="false"> <br><br>
+            Mentor Room : <input type="text" name="desc" value="{{mentor.room}}"> <br><br>
+            <input type="submit" value="SAVE">
+    </form>
+    <br><br>
+    <button><a href="{% url 'mentor' %}"> back</a></button>
+</body>
+</html>
